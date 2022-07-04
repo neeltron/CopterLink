@@ -75,6 +75,17 @@
     font-family: Julius Sans One;
     font-size: 32px;
   }
+  .container {
+   padding-right: 15px;
+   padding-left: 15px;
+   margin-right: auto;
+   margin-left: auto;
+   overflow:hidden;
+   min-height:80% !important;
+}
+  .btn {
+    width: 150px !important;
+}
     </style>
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -84,7 +95,7 @@
         <nav class="navbar navbar-expand-lg navbar-dark navbar-custom ml-auto">
           <div class="container-fluid">
             <a class="navbar-brand nav-font" href="#">
-              CopterLink
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CopterLink
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent2" aria-controls="navbarSupportedContent2" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
@@ -99,7 +110,7 @@
                 </li>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <li class="nav-item">
-                  <button type="button" class="btn btn-outline-primary disabled" style = "border-color: #FAF9F7; color:#FAF9F7;"><i class="fa fa-location-arrow"></i>  22.475, 23.674, 23.334</button>
+                  <button type="button" class="btn btn-outline-primary disabled" style = "border-color: #FAF9F7; color:#FAF9F7;"><i class="fa fa-location-arrow"></i>  22.475, 23.674, 23.334</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                   
                   
                 </li>
@@ -108,7 +119,34 @@
             </div>
           </div>
         </nav>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/5xqgvRIUffI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <div class="container">
+<div class="row">
+  <div class="col-sm-8"><iframe width="100%" height="380" src="https://www.youtube.com/embed/5xqgvRIUffI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+  <div class="col-sm-4"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d118316.88618123319!2d77.95100889575944!3d17.471915308281176!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bce0a03f17ff82b%3A0x9d02e89b98deb496!2sIIIT%20Hyderabad!5e0!3m2!1sen!2sin!4v1655992100857!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+</div>
+    <br>
+<div class="row align-items-center" style = "color: white">
+    <div class="col">
+      <img src = "BatteryFull.png" width = 30>
+      <br>
+      Battery: 69%<br>
+      Flight Time: 12 minutes<br>
+      Remaining: 39 minutes
+    </div>
+    <div class="col">
+      <img src = "InfoSquareFill.png" width = 30>
+      <br>
+      Speed: 25 m/s<br>
+      Direction: NE<br>
+      Wind: 3 m/s 24
+    </div>
+    <div class="col">
+      <button type="button" class="btn btn-success fixed-center">Initiate Landing</button><br><br>
+      <button type="button" class="btn btn-success">View Flight Logs</button><br><br>
+      <button type="button" class="btn btn-success">Override Control</button>
+    </div>
+  </div>
+</div>
 </body>
 
 </html>
