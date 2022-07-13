@@ -1,5 +1,10 @@
 from pymavlink import mavutil
 from time import sleep
+import cv2
+from pyzbar.pyzbar import decode
+from PIL import Image
+
+cap = cv2.VideoCapture(-1)
 
 def arm_vehicle():
     master.mav.command_long_send(
@@ -38,6 +43,17 @@ master.wait_heartbeat()
 vehicle_mode('STABILIZE')
 
 arm_vehicle()
+
+while(True):
+    
+    ret, frame = cap.read()
+    gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+    cv2.imshow("MAVView", gray)    
+    if decode(frame) != []:
+        print(decode(frame)[0].rect[1])
+        vehicle_mode('LAND')
+    if cv2.waitKey(1) & 0xFF == ord('q'):
+        break
 
 
 sleep(10)
